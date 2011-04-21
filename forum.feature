@@ -1,14 +1,9 @@
-Feature: Addition
-  In order to avoid silly mistakes
-  As a math idiot 
-  I want to be told the sum of two numbers
-    
-  Scenario: Register new private_messages
-
-Feature: Superbans
-A superbanned user cannot see the forum or use any of its features.
-
+Feature: Forum
+  Generic forum tests
+  
+  @allow-rescue
   Scenario: User is superbanned
-    Given I am logged in
-     When I am superbanned
-     Then I should see "You are banned from the forum."
+    Given I am logged in as a regular user with banned set to "true"
+     When I am on the forum frontpage
+     Then show me the page
+     Then I should see "You are banned."
