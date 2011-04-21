@@ -10,5 +10,5 @@ A superbanned user cannot see the forum or use any of its features.
 
   Scenario: User is superbanned
     Given I am logged in
-    When I am superbanned
-    Then I should see "You are banned from the forum."
+     When I am superbanned
+     Then I should see "You are banned from the forum."
